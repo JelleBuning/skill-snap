@@ -14,7 +14,7 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  var _currentIndex = 1;
+  var _currentIndex = 0;
   get _screens => <Widget>[
         const HomeScreen(),
         const SearchScreen(),
@@ -42,24 +42,27 @@ class _AppState extends State<App> {
 
   ThemeData getDarkTheme() {
     return ThemeData(
-      useMaterial3: false,
-      appBarTheme: const AppBarTheme(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
-      scaffoldBackgroundColor: ThemeColors.background,
-      canvasColor: ThemeColors.background,
-      cardColor: ThemeColors.card,
-      iconTheme: const IconThemeData(color: Colors.white),
-
-      highlightColor: Colors.transparent,
-      hoverColor: Colors.transparent,
-      textTheme: Theme.of(context).textTheme.apply(
-            bodyColor: Colors.white,
-            displayColor: Colors.grey,
-          ),
-      actionIconTheme: const ActionIconThemeData(), // back, menu etc.
-    );
+        useMaterial3: false,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+        scaffoldBackgroundColor: ThemeColors.background,
+        canvasColor: ThemeColors.background,
+        cardColor: ThemeColors.card,
+        iconTheme: const IconThemeData(color: Colors.white),
+        colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.white),
+        highlightColor: Colors.transparent,
+        hoverColor: Colors.transparent,
+        textTheme: Theme.of(context).textTheme.apply(
+              bodyColor: Colors.white,
+              displayColor: Colors.grey,
+            ),
+        actionIconTheme: const ActionIconThemeData(), // back, menu etc.
+        elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+                backgroundColor: ThemeColors.card,
+                foregroundColor: ThemeColors.textSecondary)));
   }
 
   Scaffold home() {
@@ -78,9 +81,12 @@ class _AppState extends State<App> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/home.svg",
-              height: 20,
+            icon: Padding(
+              padding: const EdgeInsets.all(15),
+              child: SvgPicture.asset(
+                "assets/home.svg",
+                height: 20,
+              ),
             ),
             activeIcon: SvgPicture.asset(
               "assets/home_active.svg",
@@ -89,9 +95,12 @@ class _AppState extends State<App> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/search.svg",
-              height: 20,
+            icon: Padding(
+              padding: const EdgeInsets.all(15),
+              child: SvgPicture.asset(
+                "assets/search.svg",
+                height: 20,
+              ),
             ),
             activeIcon: SvgPicture.asset(
               "assets/search_active.svg",
@@ -100,9 +109,12 @@ class _AppState extends State<App> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/inbox.svg",
-              height: 20,
+            icon: Padding(
+              padding: const EdgeInsets.all(15),
+              child: SvgPicture.asset(
+                "assets/inbox.svg",
+                height: 20,
+              ),
             ),
             activeIcon: SvgPicture.asset(
               "assets/inbox_active.svg",
@@ -111,9 +123,12 @@ class _AppState extends State<App> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              "assets/profile.svg",
-              height: 20,
+            icon: Padding(
+              padding: const EdgeInsets.all(15),
+              child: SvgPicture.asset(
+                "assets/profile.svg",
+                height: 20,
+              ),
             ),
             activeIcon: SvgPicture.asset(
               "assets/profile_active.svg",

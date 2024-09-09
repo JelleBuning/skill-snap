@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:skill_snap/constants/theme_colors.dart';
 
-class UserListItem extends StatelessWidget {
+class UserListItem extends StatefulWidget {
   final String title;
   final String subTitle;
   const UserListItem({super.key, required this.title, required this.subTitle});
 
+  @override
+  State<UserListItem> createState() => _UserListItemState();
+}
+
+class _UserListItemState extends State<UserListItem> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -26,12 +31,17 @@ class UserListItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  title,
+                  widget.title,
                   style: const TextStyle(fontSize: 14),
                 ),
-                Text(
-                  subTitle,
-                  style: TextStyle(color: ThemeColors.textSecondary),
+                SizedBox(
+                  width: (MediaQuery.sizeOf(context).width * 0.66),
+                  child: Text(
+                    widget.subTitle,
+                    style: TextStyle(
+                        color: ThemeColors.textSecondary,
+                        overflow: TextOverflow.ellipsis),
+                  ),
                 ),
               ],
             )

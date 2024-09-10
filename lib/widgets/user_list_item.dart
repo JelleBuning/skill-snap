@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:skill_snap/constants/theme_colors.dart';
 
-class UserListItem extends StatefulWidget {
-  final String title;
+class UserListItem extends StatelessWidget {
+  final String username;
   final String subTitle;
-  const UserListItem({super.key, required this.title, required this.subTitle});
+  final Color? avatarColor;
+  const UserListItem(
+      {super.key,
+      required this.username,
+      required this.subTitle,
+      this.avatarColor});
 
-  @override
-  State<UserListItem> createState() => _UserListItemState();
-}
-
-class _UserListItemState extends State<UserListItem> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      // onTap: () {},
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 7.5),
         child: Row(
@@ -22,7 +22,7 @@ class _UserListItemState extends State<UserListItem> {
           children: [
             CircleAvatar(
               radius: 30,
-              backgroundColor: ThemeColors.card,
+              backgroundColor: avatarColor ?? ThemeColors.card,
             ),
             const SizedBox(
               width: 10,
@@ -31,13 +31,13 @@ class _UserListItemState extends State<UserListItem> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  widget.title,
+                  username,
                   style: const TextStyle(fontSize: 14),
                 ),
                 SizedBox(
                   width: (MediaQuery.sizeOf(context).width * 0.66),
                   child: Text(
-                    widget.subTitle,
+                    subTitle,
                     style: TextStyle(
                         color: ThemeColors.textSecondary,
                         overflow: TextOverflow.ellipsis),

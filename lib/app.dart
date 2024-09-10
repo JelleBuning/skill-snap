@@ -19,7 +19,7 @@ class _AppState extends State<App> {
         const HomeScreen(),
         const SearchScreen(),
         const InboxScreen(),
-        const ProfileScreen()
+        const ProfileScreen(id: 1)
       ];
 
   @override
@@ -42,27 +42,32 @@ class _AppState extends State<App> {
 
   ThemeData getDarkTheme() {
     return ThemeData(
-        useMaterial3: false,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-        ),
-        scaffoldBackgroundColor: ThemeColors.background,
-        canvasColor: ThemeColors.background,
-        cardColor: ThemeColors.card,
-        iconTheme: const IconThemeData(color: Colors.white),
-        colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.white),
-        highlightColor: Colors.transparent,
-        hoverColor: Colors.transparent,
-        textTheme: Theme.of(context).textTheme.apply(
-              bodyColor: Colors.white,
-              displayColor: Colors.grey,
-            ),
-        actionIconTheme: const ActionIconThemeData(), // back, menu etc.
-        elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: ThemeColors.card,
-                foregroundColor: ThemeColors.textSecondary)));
+      useMaterial3: false,
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      scaffoldBackgroundColor: ThemeColors.background,
+      canvasColor: ThemeColors.background,
+      cardColor: ThemeColors.card,
+      iconTheme: const IconThemeData(color: Colors.white),
+      colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.white),
+      highlightColor: Colors.transparent,
+      hoverColor: Colors.transparent,
+      textTheme: Theme.of(context).textTheme.apply(
+            bodyColor: Colors.white,
+            displayColor: Colors.grey,
+          ),
+      actionIconTheme: const ActionIconThemeData(), // back, menu etc.
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+            backgroundColor: ThemeColors.card,
+            foregroundColor: ThemeColors.textSecondary),
+      ),
+      textSelectionTheme: TextSelectionThemeData(
+        selectionHandleColor: ThemeColors.textSecondary,
+      ),
+    );
   }
 
   Scaffold home() {
@@ -113,12 +118,12 @@ class _AppState extends State<App> {
               padding: const EdgeInsets.all(15),
               child: SvgPicture.asset(
                 "assets/inbox.svg",
-                height: 20,
+                height: 18,
               ),
             ),
             activeIcon: SvgPicture.asset(
               "assets/inbox_active.svg",
-              height: 20,
+              height: 18,
             ),
             label: '',
           ),

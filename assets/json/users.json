@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "posts": 34,
+      "followers": 987,
+      "following": 234,
+      "color": "ff948271"
+    },
+    {
+      "id": 2,
+      "name": "Alice Smith",
+      "posts": 12,
+      "followers": 567,
+      "following": 123,
+      "color": "718294ff"
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "posts": 78,
+      "followers": 123,
+      "following": 456,
+      "color": "9471ff82"
+    },
+    {
+      "id": 4,
+      "name": "Carol Williams",
+      "posts": 56,
+      "followers": 789,
+      "following": 345,
+      "color": "82ff9471"
+    },
+    {
+      "id": 5,
+      "name": "David Miller",
+      "posts": 90,
+      "followers": 456,
+      "following": 789,
+      "color": "ff827194"
+    },
+    {
+      "id": 6,
+      "name": "Emily Taylor",
+      "posts": 23,
+      "followers": 345,
+      "following": 123,
+      "color": "7194ff82"
+    },
+    {
+      "id": 7,
+      "name": "Frank Wilson",
+      "posts": 67,
+      "followers": 789,
+      "following": 456,
+      "color": "94ff8271"
+    },
+    {
+      "id": 8,
+      "name": "Grace Thomas",
+      "posts": 45,
+      "followers": 123,
+      "following": 789,
+      "color": "827194ff"
+    },
+    {
+      "id": 9,
+      "name": "Henry Moore",
+      "posts": 12,
+      "followers": 456,
+      "following": 345,
+      "color": "ff719482"
+    },
+    {
+      "id": 10,
+      "name": "Isabella Brown",
+      "posts": 89,
+      "followers": 789,
+      "following": 123,
+      "color": "71ff8294"
+    }
+  ]

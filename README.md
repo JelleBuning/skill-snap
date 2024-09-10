@@ -2,7 +2,9 @@
 A Social Learning Platform for Bite-Sized Knowledge
 
 MicroLearn is a social learning platform designed to make education accessible, engaging, and efficient. Inspired by popular social media platforms like TikTok and Instagram, MicroLearn offers users a unique way to consume and share micro-learning content.
-![alt text](img/design.png "App design")
+
+### Current state
+![alt text](img/design.png "Current state")
 
 ## Key Features:
 1. **Micro-Learning Content**: Users can create and share short, informative videos on a wide range of topics, from science and technology to history and arts.

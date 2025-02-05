@@ -1,4 +1,4 @@
-# SkillSnap
+# SkillSnap (WIP)
 A Social Learning Platform for Bite-Sized Knowledge
 
 SkillSnap is a social learning platform designed to make education accessible, engaging, and efficient. SkillSnap offers users a unique way to consume and share micro-learning content.
